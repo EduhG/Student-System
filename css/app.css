@@ -315,30 +315,68 @@ Login Page
     flex-direction: column;
 }
 
-.login-section {
-    padding: 10px;
+.login-section,
+.register-section {
+    padding: 20px;
     background: rgba(255, 255, 255, 1);
-    width: 350px;
+    width: 280px;
     border: 0px solid #3498db;
     box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.0);
     -webkit-box-shadow: 30px undefinedpx 5px 10px rgba(0, 0, 0, 0.9);
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
 }
 
-.login-section [type='text'] {
+@media only screen and (min-width: 480px) {
+    .login-section,
+    .register-section {
+        padding: 20px;
+        background: rgba(255, 255, 255, 1);
+        width: 350px;
+        border: 0px solid #3498db;
+        box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.0);
+        -webkit-box-shadow: 30px undefinedpx 5px 10px rgba(0, 0, 0, 0.9);
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.login-section [type='text'],
+.register-section [type='text'] {
     border: none;
     border-bottom: 0px solid #3498db;
     border-radius: 0;
     box-shadow: none;
 }
 
-.login-section button {
+.login-section .logo,
+.register-section .logo {
+    border-bottom: 2px solid;
+    padding-bottom: 5px;
+    color: #3498db;
+}
+
+.login-section button,
+.register-section button {
     width: 48%;
     margin-top: 10px
 }
 
+.register-section button {
+    width: 48%;
+    margin-bottom: 0px
+}
+
 .create-account {
     float: right;
+}
+
+.login-opts {
+    text-align: center;
+    font-weight: bolder
+}
+
+.sign-in {
+    min-width: 100%;
+    margin: 0
 }
 
 [type='text']::-moz-input-placeholder {
@@ -373,10 +411,9 @@ Login Page
     position: relative;
     z-index: 1;
     display: inline-block;
-    margin: 0 1em;
-    max-width: 350px;
-    width: calc(100% - 2em);
+    width: calc(100% - 0em);
     vertical-align: top;
+    padding: 0px;
 }
 
 .input__field {
@@ -401,6 +438,7 @@ Login Page
 
 .input--hoshi {
     overflow: hidden;
+    padding-bottom: 0px;
 }
 
 .input__field--hoshi {
