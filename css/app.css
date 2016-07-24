@@ -313,6 +313,7 @@ Login Page
     align-items: center;
     color: white;
     flex-direction: column;
+    display: none;
 }
 
 .login-container {
@@ -358,7 +359,7 @@ Login Page
 
 .login-section .logo,
 .register-section .logo {
-    border-bottom: 2px solid;
+    border-bottom: 3px solid;
     padding-bottom: 5px;
     color: #3498db;
 }
@@ -388,27 +389,32 @@ Login Page
     margin: 0
 }
 
-[type='text']::-moz-input-placeholder {
+[type='text']::-moz-input-placeholder,
+[type='password']::-moz-input-placeholder {
     color: #cacaca;
     font-size: 14px !important
 }
 
-[type='text']::-ms-input-placeholder {
+[type='text']::-ms-input-placeholder,
+[type='password']::-ms-input-placeholder {
     color: #cacaca;
     font-size: 14px !important
 }
 
-[type='text']::-0-input-placeholder {
+[type='text']::-0-input-placeholder,
+[type='password']::-0-input-placeholder {
     color: #cacaca;
     font-size: 14px !important
 }
 
-[type='text']::-webkit-input-placeholder {
+[type='text']::-webkit-input-placeholder,
+[type='password']::-webkit-input-placeholder {
     color: #cacaca;
     font-size: 14px !important
 }
 
-[type='text']::input-placeholder {
+[type='text']::input-placeholder,
+[type='password']::input-placeholder {
     color: #cacaca;
     font-size: 14px !important
 }
@@ -482,7 +488,7 @@ Login Page
 
 .input__label--hoshi::after {
     margin-top: 2px;
-    border-bottom: 2px solid red;
+    border-bottom: 3px solid red;
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
     -webkit-transition: -webkit-transform 0.3s;
@@ -490,8 +496,9 @@ Login Page
 }
 
 .input__label--hoshi-color::after {
-    border-color: hsl(200, 100%, 50%);
-    /*border-color: #3498db;*/
+    border-color: hsl(160, 100%, 50%);
+    /*border-color: hsl(200, 100%, 50%);
+    border-color: #3498db;*/
 }
 
 .input__field--hoshi:focus + .input__label--hoshi::after,
@@ -540,4 +547,41 @@ Login Page
         -webkit-transform: translate3d(0, -40%, 0);
         transform: translate3d(0, -40%, 0);
     }
+}
+
+
+/*=====================================================================
+
+dashboard
+
+=====================================================================*/
+
+#dashboard {
+    height: 100vh;
+    background-color: #3498db;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*-----------------------------------------------------------------------
+header
+------------------------------------------------------------------------*/
+
+#header {
+    height: 80px;
+    width: vw;
+    padding: 0;
+    margin: 0;
+}
+
+.logo {
+    height: 100%;
+    background: red;
+}
+
+.user-links {
+    height: 100%;
+    background: yellow
 }
