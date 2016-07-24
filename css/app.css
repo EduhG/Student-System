@@ -332,6 +332,15 @@ Login Page
     box-shadow: none;
 }
 
+.login-section button {
+    width: 48%;
+    margin-top: 10px
+}
+
+.create-account {
+    float: right;
+}
+
 [type='text']::-moz-input-placeholder {
     color: #cacaca;
     font-size: 14px !important
