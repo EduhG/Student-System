@@ -315,32 +315,41 @@ Login Page
     flex-direction: column;
 }
 
+.login-container {
+    width: 270px;
+    position: relative;
+}
+
 .login-section,
 .register-section {
     padding: 20px;
     background: rgba(255, 255, 255, 1);
-    width: 280px;
+    width: 100%;
     border: 0px solid #3498db;
     box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.0);
     -webkit-box-shadow: 30px undefinedpx 5px 10px rgba(0, 0, 0, 0.9);
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
 }
 
+.hide-section {
+    display: none;
+}
+
+.show-section {
+    display: block;
+}
+
 @media only screen and (min-width: 480px) {
-    .login-section,
-    .register-section {
-        padding: 20px;
-        background: rgba(255, 255, 255, 1);
+    .login-container {
         width: 350px;
-        border: 0px solid #3498db;
-        box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.0);
-        -webkit-box-shadow: 30px undefinedpx 5px 10px rgba(0, 0, 0, 0.9);
-        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+        position: relative;
     }
 }
 
 .login-section [type='text'],
-.register-section [type='text'] {
+.login-section [type='password'],
+.register-section [type='text'],
+.register-section [type='password'] {
     border: none;
     border-bottom: 0px solid #3498db;
     border-radius: 0;
@@ -473,7 +482,7 @@ Login Page
 
 .input__label--hoshi::after {
     margin-top: 2px;
-    border-bottom: 3px solid red;
+    border-bottom: 2px solid red;
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
     -webkit-transition: -webkit-transform 0.3s;
@@ -482,6 +491,7 @@ Login Page
 
 .input__label--hoshi-color::after {
     border-color: hsl(200, 100%, 50%);
+    /*border-color: #3498db;*/
 }
 
 .input__field--hoshi:focus + .input__label--hoshi::after,
