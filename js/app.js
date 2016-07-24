@@ -1,29 +1,33 @@
-var itemContainerHeight = 0;
-
-$(".item-details").each(function () {
-    if ($(this).height() > itemContainerHeight) {
-        itemContainerHeight = $(this).height();
+(function () {
+    // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+    if (!String.prototype.trim) {
+        (function () {
+            // Make sure we trim BOM and NBSP
+            var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+            String.prototype.trim = function () {
+                return this.replace(rtrim, '');
+            };
+        })();
     }
-});
-$(".item-details").css('min-height', itemContainerHeight);
 
-//alert(itemContainerHeight);
+    [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
+        // in case the input is already filled..
+        if (inputEl.value.trim() !== '') {
+            classie.add(inputEl.parentNode, 'input--filled');
+        }
 
-function resize() {
-    //$(".item-details").css('height', itemContainerHeight);
-    $(".item-details").css('min-height', itemContainerHeight);
-    //alert();
-}
-
-window.onresize = resize;
-
-/*//$(".item-container").height(itemContainerHeight);
-$(".item-container").css('min-height', itemContainerHeight);
-//alert();
-$(function () {
-    var totalHeight = 0;
-    $(".item-details").each(function () {
-        totalHeight += $(this).height();
+        // events:
+        inputEl.addEventListener('focus', onInputFocus);
+        inputEl.addEventListener('blur', onInputBlur);
     });
-    alert("Total height of all divs: " + totalHeight);
-});*/
+
+    function onInputFocus(ev) {
+        classie.add(ev.target.parentNode, 'input--filled');
+    }
+
+    function onInputBlur(ev) {
+        if (ev.target.value.trim() === '') {
+            classie.remove(ev.target.parentNode, 'input--filled');
+        }
+    }
+})();

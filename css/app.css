@@ -284,6 +284,10 @@ Current Page
 
 =============================================================*/
 
+#container {
+    height: 100%;
+}
+
 .row {
     max-width: 100%;
     margin: 0 auto;
@@ -309,4 +313,174 @@ Login Page
     align-items: center;
     color: white;
     flex-direction: column;
+}
+
+.login-section {
+    padding: 10px;
+    background: rgba(255, 255, 255, 1);
+    width: 350px;
+    border: 0px solid #3498db;
+    box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.0);
+    -webkit-box-shadow: 30px undefinedpx 5px 10px rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.login-section [type='text'] {
+    border: none;
+    border-bottom: 0px solid #3498db;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+[type='text']::-moz-input-placeholder {
+    color: #cacaca;
+    font-size: 14px !important
+}
+
+[type='text']::-ms-input-placeholder {
+    color: #cacaca;
+    font-size: 14px !important
+}
+
+[type='text']::-0-input-placeholder {
+    color: #cacaca;
+    font-size: 14px !important
+}
+
+[type='text']::-webkit-input-placeholder {
+    color: #cacaca;
+    font-size: 14px !important
+}
+
+[type='text']::input-placeholder {
+    color: #cacaca;
+    font-size: 14px !important
+}
+
+
+/*=============================================================*/
+
+.input {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin: 0 1em;
+    max-width: 350px;
+    width: calc(100% - 2em);
+    vertical-align: top;
+}
+
+.input__field {
+    position: relative;
+    display: block;
+    float: right;
+    padding: 0.8em;
+    width: 60%;
+    border: none;
+    border-radius: 0;
+    background: #f0f0f0;
+    -webkit-appearance: none;
+    /* for box shadows to show on iOS */
+}
+
+.input__field:focus {
+    outline: none;
+}
+
+
+/* Hoshi */
+
+.input--hoshi {
+    overflow: hidden;
+}
+
+.input__field--hoshi {
+    margin-top: 0.5em;
+    padding: 0.85em 0.0em;
+    width: 100%;
+    background: transparent;
+    color: #595F6E;
+}
+
+.input__label--hoshi {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 0.25em;
+    width: 100%;
+    height: calc(100% - 1em);
+    text-align: left;
+    pointer-events: none;
+}
+
+.input__label--hoshi::before,
+.input__label--hoshi::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 10px);
+    border-bottom: 1px solid #B9C1CA;
+}
+
+.input__label--hoshi::after {
+    margin-top: 2px;
+    border-bottom: 3px solid red;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.input__label--hoshi-color::after {
+    border-color: hsl(200, 100%, 50%);
+}
+
+.input__field--hoshi:focus + .input__label--hoshi::after,
+.input--filled .input__label--hoshi::after {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.input__field--hoshi:focus + .input__label--hoshi .input__label-content--hoshi,
+.input--filled .input__label-content--hoshi {
+    -webkit-animation: anim-1 0.3s forwards;
+    animation: anim-1 0.3s forwards;
+}
+
+@-webkit-keyframes anim-1 {
+    50% {
+        opacity: 0;
+        -webkit-transform: translate3d(1em, 0, 0);
+        transform: translate3d(1em, 0, 0);
+    }
+    51% {
+        opacity: 0;
+        -webkit-transform: translate3d(-1em, -40%, 0);
+        transform: translate3d(-1em, -40%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -40%, 0);
+        transform: translate3d(0, -40%, 0);
+    }
+}
+
+@keyframes anim-1 {
+    50% {
+        opacity: 0;
+        -webkit-transform: translate3d(1em, 0, 0);
+        transform: translate3d(1em, 0, 0);
+    }
+    51% {
+        opacity: 0;
+        -webkit-transform: translate3d(-1em, -40%, 0);
+        transform: translate3d(-1em, -40%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -40%, 0);
+        transform: translate3d(0, -40%, 0);
+    }
 }
