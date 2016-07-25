@@ -705,10 +705,10 @@ header
 
 .db-content-pane {
     height: calc(100vh - 72px);
-    background: transparent;
-    border-top-left-radius: 15px;
+    background: #F7F7F7;
+    border-top-left-radius: 0px;
 }
 
 .db-summary {
-    border-top-left-radius: 15px;
+    border-top-left-radius: 0px;
 }
