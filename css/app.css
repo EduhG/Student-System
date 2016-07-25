@@ -575,16 +575,16 @@ header
     padding: 0;
     margin: 0;
     border-bottom: 0px solid #fff;
-    background: #EDEDED;
     background-color: #3498db;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background: #EDEDED;
+    border-bottom: 0px solid rgba(0, 0, 0, 0.3);
 }
 
 .vertical-align-content {
     display: flex;
     justify-content: center;
     /*    align-items: center;*/
-    color: white;
+    color: #000;
     flex-direction: column;
 }
 
@@ -600,13 +600,14 @@ header
     height: 70px;
     background: transparent;
     font-size: 35px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 0px solid rgba(0, 0, 0, 0.3);
+    color: #EDEDED;
 }
 
 .user-details {
     margin: 0;
     padding: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 0px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
@@ -637,7 +638,8 @@ header
 
 .user-links {
     height: 100%;
-    background: transparent
+    background: transparent;
+    color: #000;
 }
 
 @media only screen and (min-width: 480px) {
@@ -681,10 +683,19 @@ header
     margin: 0
 }
 
+.border-top {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.border-bottom {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
 #db-content {
     height: 100%;
     margin-left: 320px;
-    background: #fff;
+    background: #3498db;
+    background: #EDEDED;
     border-top-left-radius: 0px;
 }
 
@@ -692,6 +703,12 @@ header
     height: 100%;
 }
 
+.db-content-pane {
+    height: calc(100vh - 72px);
+    background: transparent;
+    border-top-left-radius: 15px;
+}
+
 .db-summary {
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-top-left-radius: 15px;
 }
