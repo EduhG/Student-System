@@ -575,7 +575,9 @@ header
     padding: 0;
     margin: 0;
     border-bottom: 0px solid #fff;
-    background: #EDEDED
+    background: #EDEDED;
+    background-color: #3498db;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .vertical-align-content {
@@ -595,8 +597,42 @@ header
 }
 
 .logo {
-    height: 100%;
+    height: 70px;
     background: transparent;
+    font-size: 35px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.user-details {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.user-details > div {}
+
+.profile-pic {
+    margin: auto;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: 5px solid #EDEDED;
+}
+
+.profile-details {
+    height: 100px;
+}
+
+.profile-details p {
+    padding: 0;
+    margin: 0;
+    color: #EDEDED;
+}
+
+.main-navigation {
+    background: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .user-links {
@@ -641,6 +677,10 @@ header
     float: left
 }
 
+#sidenav > div {
+    margin: 0
+}
+
 #db-content {
     height: 100%;
     margin-left: 320px;
@@ -650,4 +690,8 @@ header
 
 #header >div {
     height: 100%;
+}
+
+.db-summary {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
