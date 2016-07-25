@@ -586,6 +586,14 @@ header
     flex-direction: column;
 }
 
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
 .logo {
     height: 100%;
     background: transparent;
@@ -612,6 +620,7 @@ header
     margin: 0;
     background: #3498db;
     overflow-x: hidden;
+    border-top: 1px solid #3498db;
 }
 
 #content > .row {
@@ -637,4 +646,8 @@ header
     margin-left: 320px;
     background: #fff;
     border-top-left-radius: 0px;
+}
+
+#header >div {
+    height: 100%;
 }
