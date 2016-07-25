@@ -313,7 +313,7 @@ Login Page
     align-items: center;
     color: white;
     flex-direction: column;
-    display: none;
+/*    display: none;*/
 }
 
 .login-container {
